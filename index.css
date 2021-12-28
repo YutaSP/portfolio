@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#navigation {
+  background-color: grey;
+  width: 19vh;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 20px 50px;
+  background: black;
+  color: white;
+
+  transition: transform 0.3s ease;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background: grey;
+
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translate(-12px, -12px);
+}
+
+.btn:hover::after {
+  transform: translate(6px, 6px);
+}
+
+.btn:hover::before {
+  transform: translate(12px, 12px);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.mainPage,
+.aboutPage,
+.projectPage,
+.contactPage {
+  background: black;
+  height: 100vh;
+  font-size: 175%;
+  color: white;
+}
+.aboutPage,
+.projectPage,
+.contactPage {
+  padding-left: 20vh;
+}
+
+.mainPage {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.mainPage a {
+  text-decoration: none;
+  color: white;
+  font-size: 70%;
+  background-color: grey;
+  padding-right: 2%;
+  padding-left: 2%;
+  border-radius: 12px;
+}
+.aboutPage p {
+  font-size: 70%;
+}
+
+.projectlist a {
+  text-decoration: none;
+  color: white;
+  font-size: 65%;
+  background-color: cadetblue;
+  border-radius: 10px;
+  padding-right: 2%;
+  padding-left: 2%;
+}
